@@ -10,12 +10,11 @@ const SearchBook = ({book, updateBookShelf, allBooks}) => {
 
     }
 
-            const image =
+         const image =
               book.imageLinks && book.imageLinks.thumbnail
                 ? book.imageLinks.thumbnail
                 : "";
-
-
+ 
   return (
     <div>
       <li>
@@ -33,6 +32,7 @@ const SearchBook = ({book, updateBookShelf, allBooks}) => {
               <select
                 value={selectVal}
                 onChange={(e) => updateBookShelf(book, e.target.value)}
+                
               >
                 <option value="move" disabled>
                   Move to...

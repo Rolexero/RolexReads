@@ -31,8 +31,6 @@ const navigate = useNavigate();
         navigate('/')
     }
 
-
-
   return (
     <div className="search-books">
       <div className="search-books-bar">

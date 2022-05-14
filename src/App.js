@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import AllBooks from './components/AllBooks';
 import { ThemeProvider, createTheme } from "@material-ui/core/styles";
-import { useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import * as BooksApi from "./BooksApi";
 import { Routes, Route } from 'react-router-dom';
 import SearchPage from './components/SearchPage'
@@ -27,25 +27,24 @@ const theme = createTheme({
 
 
 function App() {
-  const [allBooks, setAllBooks] = useState([])
-
-  useEffect(()=>{
-    const getBooks = async () => {
-      const getBooksFromDb = await fetchAllBooks();
-      setAllBooks(getBooksFromDb)
-    }
-    getBooks();
-  }, [])
-
-  const fetchAllBooks = async () =>{
+  const [allBooks, setAllBooks] = useState([]);
+  const fetchAllBooks = useCallback(async () =>{
     const response = await BooksApi.getAll();
     return response;
-  }
+  }, [])
+
+    useEffect(() => {
+      const getBooks = async () => {
+        const getBooksFromDb = await fetchAllBooks();
+        setAllBooks(getBooksFromDb);
+      };
+      getBooks();
+    }, [fetchAllBooks]);
+
 
   const updateShelf = async (book, shelf)=>{
     setAllBooks(allBooks.map((eachBook)=> eachBook.id === book.id ? {...eachBook, shelf: shelf} : eachBook))
     const response = await BooksApi.update(book, shelf);
-        console.log( response);
     return response;
   }
 
