@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/RolexReads/static/css/main.2cb24e64.css",
+    "main.js": "/RolexReads/static/js/main.5f459974.js",
+    "static/js/787.1db6a43a.chunk.js": "/RolexReads/static/js/787.1db6a43a.chunk.js",
+    "static/media/logo.svg": "/RolexReads/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/RolexReads/index.html",
+    "static/media/arrow-back.svg": "/RolexReads/static/media/arrow-back.cd079cab42defead9875.svg",
+    "static/media/add.svg": "/RolexReads/static/media/add.1b5d9b6afb5557f7992c.svg",
+    "static/media/arrow-drop-down.svg": "/RolexReads/static/media/arrow-drop-down.4378492a3a09dbfc31ff.svg",
+    "main.2cb24e64.css.map": "/RolexReads/static/css/main.2cb24e64.css.map",
+    "main.5f459974.js.map": "/RolexReads/static/js/main.5f459974.js.map",
+    "787.1db6a43a.chunk.js.map": "/RolexReads/static/js/787.1db6a43a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2cb24e64.css",
+    "static/js/main.5f459974.js"
+  ]
+}
